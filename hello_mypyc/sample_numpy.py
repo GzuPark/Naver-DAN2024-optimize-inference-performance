@@ -2,10 +2,10 @@ import numpy as np
 
 def calculate_with_numpy(batch_size=10):
     input_row_dict = {
-        "ad_click_cnt": np.array([10, 20, 0, 30]) * batch_size,
-        "ad_impression_cnt": np.array([5, 0, 15, 25]) * batch_size,
-        "ad2_click_cnt": np.array([10, 20, 0, 30]) * batch_size,
-        "ad2_impression_cnt": np.array([5, 0, 15, 25]) * batch_size,
+        "ad_click_cnt": np.tile([10, 20, 0, 30], batch_size),
+        "ad_impression_cnt": np.tile([5, 0, 15, 25], batch_size),
+        "ad2_click_cnt": np.tile([10, 20, 0, 30], batch_size),
+        "ad2_impression_cnt": np.tile([5, 0, 15, 25], batch_size),
     }
 
     # numpy 연산을 통해 벡터화된 방식으로 전환
